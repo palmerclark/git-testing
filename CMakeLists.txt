@@ -8,7 +8,9 @@ target_sources(test
     testing.cpp
   )
 
-target_source(test
+  add_library(test-library)
+
+target_sources(test-library
   PRIVATE
     library.cpp
 
@@ -19,4 +21,9 @@ target_source(test
 	~/projects/git-testing
       FILES
 	~/projects/git-testing/library.h
+)
+
+target_link_libraries(test
+  PRIVATE
+    test-library
 )

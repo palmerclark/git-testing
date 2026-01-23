@@ -1,3 +1,4 @@
 /home/palmer/projects/git-testing/build/CMakeFiles/test.dir
+/home/palmer/projects/git-testing/build/CMakeFiles/test-library.dir
 /home/palmer/projects/git-testing/build/CMakeFiles/edit_cache.dir
 /home/palmer/projects/git-testing/build/CMakeFiles/rebuild_cache.dir

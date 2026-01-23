@@ -129,29 +129,66 @@ test/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/build
 .PHONY : test/fast
 
-hello-world.o: hello-world.cpp.o
-.PHONY : hello-world.o
+#=============================================================================
+# Target rules for targets named test-library
+
+# Build rule for target.
+test-library: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test-library
+.PHONY : test-library
+
+# fast build rule for target.
+test-library/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test-library.dir/build.make CMakeFiles/test-library.dir/build
+.PHONY : test-library/fast
+
+library.o: library.cpp.o
+.PHONY : library.o
 
 # target to build an object file
-hello-world.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/hello-world.cpp.o
-.PHONY : hello-world.cpp.o
+library.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test-library.dir/build.make CMakeFiles/test-library.dir/library.cpp.o
+.PHONY : library.cpp.o
 
-hello-world.i: hello-world.cpp.i
-.PHONY : hello-world.i
+library.i: library.cpp.i
+.PHONY : library.i
 
 # target to preprocess a source file
-hello-world.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/hello-world.cpp.i
-.PHONY : hello-world.cpp.i
+library.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test-library.dir/build.make CMakeFiles/test-library.dir/library.cpp.i
+.PHONY : library.cpp.i
 
-hello-world.s: hello-world.cpp.s
-.PHONY : hello-world.s
+library.s: library.cpp.s
+.PHONY : library.s
 
 # target to generate assembly for a file
-hello-world.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/hello-world.cpp.s
-.PHONY : hello-world.cpp.s
+library.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test-library.dir/build.make CMakeFiles/test-library.dir/library.cpp.s
+.PHONY : library.cpp.s
+
+testing.o: testing.cpp.o
+.PHONY : testing.o
+
+# target to build an object file
+testing.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/testing.cpp.o
+.PHONY : testing.cpp.o
+
+testing.i: testing.cpp.i
+.PHONY : testing.i
+
+# target to preprocess a source file
+testing.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/testing.cpp.i
+.PHONY : testing.cpp.i
+
+testing.s: testing.cpp.s
+.PHONY : testing.s
+
+# target to generate assembly for a file
+testing.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/testing.cpp.s
+.PHONY : testing.cpp.s
 
 # Help Target
 help:
@@ -162,9 +199,13 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... test"
-	@echo "... hello-world.o"
-	@echo "... hello-world.i"
-	@echo "... hello-world.s"
+	@echo "... test-library"
+	@echo "... library.o"
+	@echo "... library.i"
+	@echo "... library.s"
+	@echo "... testing.o"
+	@echo "... testing.i"
+	@echo "... testing.s"
 .PHONY : help
 
 

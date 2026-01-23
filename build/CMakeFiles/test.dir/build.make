@@ -72,30 +72,31 @@ include CMakeFiles/test.dir/flags.make
 CMakeFiles/test.dir/codegen:
 .PHONY : CMakeFiles/test.dir/codegen
 
-CMakeFiles/test.dir/hello-world.cpp.o: CMakeFiles/test.dir/flags.make
-CMakeFiles/test.dir/hello-world.cpp.o: /home/palmer/projects/git-testing/hello-world.cpp
-CMakeFiles/test.dir/hello-world.cpp.o: CMakeFiles/test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/palmer/projects/git-testing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/test.dir/hello-world.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.dir/hello-world.cpp.o -MF CMakeFiles/test.dir/hello-world.cpp.o.d -o CMakeFiles/test.dir/hello-world.cpp.o -c /home/palmer/projects/git-testing/hello-world.cpp
+CMakeFiles/test.dir/testing.cpp.o: CMakeFiles/test.dir/flags.make
+CMakeFiles/test.dir/testing.cpp.o: /home/palmer/projects/git-testing/testing.cpp
+CMakeFiles/test.dir/testing.cpp.o: CMakeFiles/test.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/palmer/projects/git-testing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/test.dir/testing.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test.dir/testing.cpp.o -MF CMakeFiles/test.dir/testing.cpp.o.d -o CMakeFiles/test.dir/testing.cpp.o -c /home/palmer/projects/git-testing/testing.cpp
 
-CMakeFiles/test.dir/hello-world.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/test.dir/hello-world.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/palmer/projects/git-testing/hello-world.cpp > CMakeFiles/test.dir/hello-world.cpp.i
+CMakeFiles/test.dir/testing.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/test.dir/testing.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/palmer/projects/git-testing/testing.cpp > CMakeFiles/test.dir/testing.cpp.i
 
-CMakeFiles/test.dir/hello-world.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/test.dir/hello-world.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/palmer/projects/git-testing/hello-world.cpp -o CMakeFiles/test.dir/hello-world.cpp.s
+CMakeFiles/test.dir/testing.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/test.dir/testing.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/palmer/projects/git-testing/testing.cpp -o CMakeFiles/test.dir/testing.cpp.s
 
 # Object files for target test
 test_OBJECTS = \
-"CMakeFiles/test.dir/hello-world.cpp.o"
+"CMakeFiles/test.dir/testing.cpp.o"
 
 # External object files for target test
 test_EXTERNAL_OBJECTS =
 
-test: CMakeFiles/test.dir/hello-world.cpp.o
+test: CMakeFiles/test.dir/testing.cpp.o
 test: CMakeFiles/test.dir/build.make
 test: CMakeFiles/test.dir/compiler_depend.ts
+test: libtest-library.a
 test: CMakeFiles/test.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/palmer/projects/git-testing/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable test"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/test.dir/link.txt --verbose=$(VERBOSE)

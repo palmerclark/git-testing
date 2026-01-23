@@ -64,10 +64,12 @@ CMAKE_BINARY_DIR = /home/palmer/projects/git-testing/build
 
 # The main recursive "all" target.
 all: CMakeFiles/test.dir/all
+all: CMakeFiles/test-library.dir/all
 .PHONY : all
 
 # The main recursive "codegen" target.
 codegen: CMakeFiles/test.dir/codegen
+codegen: CMakeFiles/test-library.dir/codegen
 .PHONY : codegen
 
 # The main recursive "preinstall" target.
@@ -76,13 +78,14 @@ preinstall:
 
 # The main recursive "clean" target.
 clean: CMakeFiles/test.dir/clean
+clean: CMakeFiles/test-library.dir/clean
 .PHONY : clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/test.dir
 
 # All Build rule for target.
-CMakeFiles/test.dir/all:
+CMakeFiles/test.dir/all: CMakeFiles/test-library.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/palmer/projects/git-testing/build/CMakeFiles --progress-num=1,2 "Built target test"
@@ -90,7 +93,7 @@ CMakeFiles/test.dir/all:
 
 # Build rule for subdir invocation for target.
 CMakeFiles/test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/palmer/projects/git-testing/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/palmer/projects/git-testing/build/CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/palmer/projects/git-testing/build/CMakeFiles 0
 .PHONY : CMakeFiles/test.dir/rule
@@ -109,6 +112,38 @@ CMakeFiles/test.dir/codegen:
 CMakeFiles/test.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/clean
 .PHONY : CMakeFiles/test.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/test-library.dir
+
+# All Build rule for target.
+CMakeFiles/test-library.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test-library.dir/build.make CMakeFiles/test-library.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test-library.dir/build.make CMakeFiles/test-library.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/palmer/projects/git-testing/build/CMakeFiles --progress-num=3,4 "Built target test-library"
+.PHONY : CMakeFiles/test-library.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/test-library.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/palmer/projects/git-testing/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/test-library.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/palmer/projects/git-testing/build/CMakeFiles 0
+.PHONY : CMakeFiles/test-library.dir/rule
+
+# Convenience name for target.
+test-library: CMakeFiles/test-library.dir/rule
+.PHONY : test-library
+
+# codegen rule for target.
+CMakeFiles/test-library.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test-library.dir/build.make CMakeFiles/test-library.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/palmer/projects/git-testing/build/CMakeFiles --progress-num=3,4 "Finished codegen for target test-library"
+.PHONY : CMakeFiles/test-library.dir/codegen
+
+# clean rule for target.
+CMakeFiles/test-library.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test-library.dir/build.make CMakeFiles/test-library.dir/clean
+.PHONY : CMakeFiles/test-library.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

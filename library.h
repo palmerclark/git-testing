@@ -6,3 +6,5 @@
 namespace external {
 void print(std::string_view content);
 } // namespace external
+
+#endif
