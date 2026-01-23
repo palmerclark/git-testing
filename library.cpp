@@ -5,4 +5,6 @@ void print(std::string_view content) {
   std::cout << "Hello! I'm printing your content from a library.\n";
   std::cout << content;
 }
+
+int add(int a, int b) { return a + b; }
 } // namespace external
