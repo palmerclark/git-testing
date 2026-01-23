@@ -8,7 +8,7 @@ target_sources(test
     testing.cpp
   )
 
-target_source(testing-library
+target_source(test
   PRIVATE
     library.cpp
 
