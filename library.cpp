@@ -2,7 +2,10 @@
 
 namespace external {
 void print(std::string_view content) {
-  std::cout << "Hello! I'm printing your content from a library.\n";
+  std::cout << "LIBRARY\n";
+  std::cout << "=======\n";
+  std::cout
+      << "There was an issue with me :( The issue branch fixed me though!\n";
   std::cout << content;
 }
 } // namespace external
